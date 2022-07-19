@@ -15,8 +15,6 @@ defmodule Airtable.Camelizer do
     end
   end
 
-  defp camelize_list([], _), do: []
-
   defp camelize_list([h | tail]) do
     [String.downcase(h)] ++ camelize_list(tail, :upper)
   end
@@ -24,4 +22,6 @@ defmodule Airtable.Camelizer do
   defp camelize_list([h | tail], :upper) do
     [String.capitalize(h)] ++ camelize_list(tail, :upper)
   end
+
+  defp camelize_list([], _), do: []
 end

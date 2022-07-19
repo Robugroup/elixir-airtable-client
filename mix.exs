@@ -46,8 +46,8 @@ defmodule Airtable.MixProject do
   defp deps do
     [
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
-      {:mojito, "~> 0.5.0"},
-      {:jason, "~> 1.1"}
+      {:mojito, "~> 0.7.12"},
+      {:jason, "~> 1.3"}
     ]
   end
 end
